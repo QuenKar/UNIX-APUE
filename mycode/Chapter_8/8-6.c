@@ -12,14 +12,11 @@ int main(void)
     }
     else if (pid == 0)
     {
-        if ((pid == fork()) < 0)
+        if ((pid = fork()) < 0)
             err_sys("fork error");
         else if (pid > 0)
-        {
             exit(2);
-        }
 
-        sleep(2);
         printf("parent pid = %ld\n", (long)getppid());
         exit(3);
     }
