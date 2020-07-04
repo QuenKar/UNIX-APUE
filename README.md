@@ -2,7 +2,7 @@
 
 ## UNIX apue配置
 
-ubuntu环境下
+deepin 环境下
 
 > apt-get install libbsd-dev
 
