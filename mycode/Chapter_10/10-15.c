@@ -39,7 +39,7 @@ static void sig_quit(int signo)
 
 $ ./10-15                    
 ^\
-SIGQUIT pending
+SIGQUIT pending   
 caught SIGQUIT
 SIGQUIT unblocked
 ^\[1]    7920 quit       ./10-15

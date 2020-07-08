@@ -48,6 +48,9 @@ int main(void)
 }
 
 /*
+my test
+The results are different from the Apue said.
+
 Result 1: 
 $ ./10-9 
 sleep2 returned :0
