@@ -24,7 +24,7 @@ unsigned int sleep2(unsigned int seconds)
 
 static void sig_int(int signo)
 {
-    int i, j;
+    volatile int i, j;
     volatile int k;
 
     printf("\nsig_int starting\n");
