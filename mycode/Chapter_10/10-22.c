@@ -44,7 +44,7 @@ $ ./10-22
 program start: 
 in criticla region:  SIGINT
 ^C
- in sig_int:  SIGUSR1
+in sig_int:  SIGUSR1
 after return from sigsuspend:  SIGINT
 program exit: 
 
