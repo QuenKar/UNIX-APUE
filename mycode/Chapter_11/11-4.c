@@ -16,17 +16,18 @@ void printfoo(const char *s, const struct foo *fp)
     printf(" foo.d = %d\n", fp->d);
 }
 //设为全局变量就不会发生结果一问题
-struct foo foo = {1, 2, 3, 4};
+//struct foo foo = {1, 2, 3, 4};
 
 void *thr_fn1(void *arg)
 {
-    //struct foo foo = {1, 2, 3, 4};
+    struct foo foo = {1, 2, 3, 4};
     printfoo("thread 1:\n", &foo);
     pthread_exit((void *)&foo);
 }
 
 void *thr_fn2(void *arg)
 {
+    printf("I am the second thread\n");
     printf("thread 2: ID is %lu\n", (unsigned long)pthread_self());
     pthread_exit((void *)0);
 }
@@ -73,7 +74,6 @@ parent:
  foo.b = 32582
  foo.c = 1
  foo.d = 0
-
 
  The Result two:
 $ ./11-4                             
