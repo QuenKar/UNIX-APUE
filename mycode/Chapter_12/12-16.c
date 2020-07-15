@@ -61,7 +61,7 @@ int main(void)
     quitflag = 0;
     if (sigprocmask(SIG_SETMASK, &oldmask, NULL) < 0)
         err_sys("SIG_SETMASK error");
-    exit(0);
+    exit(0); 
 }
 
 /*

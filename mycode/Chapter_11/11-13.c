@@ -18,7 +18,7 @@ int main(void)
     printf("current time is %s\n", buf);
     tout.tv_sec += 10;
 
-    err = pthread_mutex_timedlock(&lock, &tout);
+    err = pthread_mutex_timedlock(&lock, &tout); //这会导致死锁;
     clock_gettime(CLOCK_REALTIME, &tout);
     tmp = localtime(&tout.tv_sec);
     strftime(buf, sizeof(buf), "%r", tmp);
