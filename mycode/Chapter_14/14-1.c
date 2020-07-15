@@ -36,8 +36,6 @@ $ ./14-1 < ./test >temp.file
 read 500000 bytes
 nwrite = 500000,errno = 0
 
-
-
 $ ./14-1 < ./test 2>stderr.out 
 结果见stderr.out
  */
